@@ -29,112 +29,118 @@
     url("/fonts/sherman/Sherman-Display.woff2") format("woff2");
 }
 
-html, body {
-  @apply p-0 m-0 bg-black;
+@layer base {
+  html, body {
+    @apply p-0 m-0 bg-black;
+  }
+
+  header {
+    background: url('/images/bg--btm.png') center bottom no-repeat, url('/images/bg--left.png') left top no-repeat, url('/images/bg--right.png') right top no-repeat;
+    background-size: 100% auto, auto 100%, auto 100%;
+    @apply min-h-[100vh] min-w-[100vw] z-20 relative;
+  }
+
+  main {
+    @apply text-white;
+  }
+
+  section {
+    @apply max-w-[550px] w-full relative mx-auto mb-[80px];
+  }
+
+  h3 {
+    @apply uppercase font-wide text-2xl mb-6 tracking-tighter text-center text-carminePink;
+  }
+
+  p {
+    @apply mb-6;
+  }
+
+  ol {
+    counter-reset: ordered-list;
+    @apply pl-6
+  }
+
+  ol > li {
+    @apply relative pl-2;
+  }
+
+  ol > li:before {
+    content: counter(ordered-list);
+    counter-increment: ordered-list;
+    @apply absolute -left-6 font-wide text-sunshade text-2xl -top-1;
+  }
+
+  ol > li > ul {
+    @apply mt-5
+  }
+
+  ul {
+    @apply list-disc pl-7;
+  }
+
+  li {
+    @apply mb-8;
+  }
+
+  footer {
+    @apply text-xs text-center italic py-10;
+  }
+
+  section a {
+    @apply font-bold text-sunshade underline hover:no-underline
+  }
 }
 
-header {
-  background: url('/images/bg--btm.png') center bottom no-repeat, url('/images/bg--left.png') left top no-repeat, url('/images/bg--right.png') right top no-repeat;
-  background-size: 100% auto, auto 100%, auto 100%;
-  @apply min-h-[100vh] min-w-[100vw] z-20 relative;
+@layer components {
+  .hour-1 {
+    @apply from-[#fb9344] to-[#de43b5]
+  }
+
+  .hour-2 {
+    @apply from-[#008db4] to-[#fb9344]
+  }
+
+  .hour-3 {
+    @apply from-[#028cb4] to-[#5f9875]
+  }
+
+  .hour-4{
+    @apply from-[#fb44d3] to-[#fb9246]
+  }
+
+  .hour-5 {
+    @apply from-[#028cb4] to-[#fd9a4c]
+  }
+
+  .hour-6 {
+    @apply from-[#04374b] to-[#110f12];
+  }
+
+  .hour-5 .sky-overlay,
+  .hour-6 .sky-overlay {
+    @apply bg-gradient-to-b from-[#0f0f17] to-transparent;
+  }
+
+  .hour-6 .sky-overlay {
+    @apply bg-opacity-80;
+  }
+
+  .hour-1 h1,
+  .hour-2 h1,
+  .hour-3 h1,
+  .hour-4 h1 {
+    @apply text-white lg:text-firefly;
+  }
+
+  .hour-5 h1,
+  .hour-6 h1 {
+    @apply text-sunshade;
+  }
 }
 
-main {
-  @apply text-white;
-}
-
-section {
-  @apply max-w-[550px] w-full relative mx-auto mb-[80px];
-}
-
-h3 {
-  @apply uppercase font-wide text-2xl mb-6 tracking-tighter text-center text-carminePink;
-}
-
-p {
-  @apply mb-6;
-}
-
-ol {
-  counter-reset: ordered-list;
-  @apply pl-6
-}
-
-ol > li {
-  @apply relative pl-2;
-}
-
-ol > li:before {
-  content: counter(ordered-list);
-  counter-increment: ordered-list;
-  @apply absolute -left-6 font-wide text-sunshade text-2xl -top-1;
-}
-
-ol > li > ul {
-  @apply mt-5
-}
-
-ul {
-  @apply list-disc pl-7;
-}
-
-li {
-  @apply mb-8;
-}
-
-.center {
-  @apply flex items-center justify-center;
-}
-
-.hour-1 {
-  @apply from-[#fb9344] to-[#de43b5]
-}
-
-.hour-2 {
-  @apply from-[#008db4] to-[#fb9344]
-}
-
-.hour-3 {
-  @apply from-[#028cb4] to-[#5f9875]
-}
-
-.hour-4{
-  @apply from-[#fb44d3] to-[#fb9246]
-}
-
-.hour-5 {
-  @apply from-[#028cb4] to-[#fd9a4c]
-}
-
-.hour-6 {
-  @apply from-[#04374b] to-[#110f12];
-}
-
-.hour-5 .sky-overlay,
-.hour-6 .sky-overlay {
-  @apply bg-gradient-to-b from-[#0f0f17] to-transparent;
-}
-
-.hour-6 .sky-overlay {
-  @apply bg-opacity-80;
-}
-
-.hour-1 h1,
-.hour-2 h1,
-.hour-3 h1,
-.hour-4 h1 {
-  @apply text-firefly;
-}
-
-.hour-5 h1,
-.hour-6 h1 {
-  @apply text-sunshade;
-}
-
-footer {
-  @apply text-xs text-center italic py-10;
-}
-
-section a {
-  @apply font-bold text-sunshade underline hover:no-underline
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
+  }
 }

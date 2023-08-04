@@ -46,7 +46,7 @@ const HomePage = () => {
           </video>
         ) : (
           <video
-            className="pointer-events-none absolute inset-0 z-50 w-full mix-blend-multiply"
+            className="pointer-events-none absolute inset-0 z-50 mt-[25vh] w-full mix-blend-multiply md:mt-0"
             width="1440"
             height="810"
             controls={false}
@@ -60,18 +60,18 @@ const HomePage = () => {
         <header>
           {/* sky overlay for nighttime */}
           <section className="sky-overlay min-h-[100vh] min-w-[100vw] pt-[70px] text-center">
-            <div className="relative mx-auto w-[550px] text-center">
+            <div className="relative mx-auto w-full px-5 text-center sm:w-[550px]">
               <img
                 src="/images/logo.svg"
                 alt="RedwoodJS"
                 className="mx-auto mb-[50px]"
               />
-              <h1 className="mb-10 font-condensed text-[100px] leading-none md:text-[150px] md:leading-[144px] ">
+              <h1 className="mb-10 font-condensed text-[100px] leading-none md:text-[150px] md:leading-[144px]">
                 Build
                 <br />
                 Competition
               </h1>
-              <h2 className="mb-[70px] font-wide text-[25px] tracking-[-7%] text-[#faf0e1]">
+              <h2 className="mb-[70px] font-wide text-base tracking-[-7%] text-[#faf0e1] sm:text-[25px]">
                 Get Creative &amp;
                 <br />
                 Build Something Cool
