@@ -1,10 +1,32 @@
+import { useEffect, useState } from 'react'
+
 import SubmitApplication from 'src/components/SubmitApplication/SubmitApplication'
 import { getCurrentYear } from 'src/utils/DateHelpers'
 
 import { Constants } from '../../utils/Constants'
 
 const HomePage = () => {
-  const time = 'hour-6'
+  const [time, setTime] = useState('hour-1')
+
+  useEffect(() => {
+    // get the current, local time
+    const date = new Date()
+    const hour = date.getHours()
+
+    if (hour < 8) {
+      setTime('hour-1')
+    } else if (hour < 10) {
+      setTime('hour-2')
+    } else if (hour < 12) {
+      setTime('hour-3')
+    } else if (hour < 14) {
+      setTime('hour-4')
+    } else if (hour < 16) {
+      setTime('hour-5')
+    } else if (hour < 18) {
+      setTime('hour-6')
+    }
+  }, [])
 
   return (
     <>
@@ -44,8 +66,10 @@ const HomePage = () => {
                 alt="RedwoodJS"
                 className="mx-auto mb-[50px]"
               />
-              <h1 className="mb-10 font-condensed text-[150px] leading-[144px] ">
-                Build Competition
+              <h1 className="mb-10 font-condensed text-[100px] leading-none md:text-[150px] md:leading-[144px] ">
+                Build
+                <br />
+                Competition
               </h1>
               <h2 className="mb-[70px] font-wide text-[25px] tracking-[-7%] text-[#faf0e1]">
                 Get Creative &amp;
@@ -57,7 +81,7 @@ const HomePage = () => {
           </section>
         </header>
       </div>
-      <main>
+      <main className="px-5 md:px-0">
         <section>
           <p>
             Do you have an idea that you&apos;ve been wanting to build with
