@@ -3,7 +3,7 @@ const Constants = {
   CONFERENCE_URL: 'https://redwoodjsconf.com',
   REDWOODJS_URL: 'https://redwoodjs.com',
   GITHUB_URL: 'https://github.com',
-  EMAIL: 'competition@redwoodjs.com',
+  EMAIL: 'build@redwoodjs.com',
 }
 
 Object.freeze(Constants)
