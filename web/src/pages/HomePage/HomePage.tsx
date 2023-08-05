@@ -13,6 +13,8 @@ const HomePage = () => {
     const date = new Date()
     const hour = date.getHours()
 
+    console.log({ hour })
+
     if (hour < 8) {
       setTime('hour-1')
     } else if (hour < 10) {
@@ -23,10 +25,12 @@ const HomePage = () => {
       setTime('hour-4')
     } else if (hour < 16) {
       setTime('hour-5')
-    } else if (hour < 18) {
+    } else {
       setTime('hour-6')
     }
-  }, [])
+
+    console.log({ time })
+  }, [setTime, time])
 
   return (
     <>
