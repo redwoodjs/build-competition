@@ -13,8 +13,6 @@ const HomePage = () => {
     const date = new Date()
     const hour = date.getHours()
 
-    console.log({ hour })
-
     if (hour < 8) {
       setTime('hour-1')
     } else if (hour < 10) {
@@ -75,10 +73,12 @@ const HomePage = () => {
                 <br />
                 Competition
               </h1>
-              <h2 className="mb-[70px] font-wide text-base tracking-[-7%] text-[#faf0e1] sm:text-[25px]">
+              <h2 className="mb-[70px] font-wide text-base leading-tight tracking-[-7%] text-[#faf0e1] sm:text-[25px]">
                 Get Creative &amp;
                 <br />
                 Build Something Cool
+                <br />
+                &amp; win cash money
               </h2>
               <SubmitApplication />
             </div>
@@ -142,9 +142,9 @@ const HomePage = () => {
             <li>3rd Place - $1k</li>
           </ul>
           <p>
-            Additionally, <em>all finalists</em> will receive complimentary
-            tickets to the conference, as well as, lodging and transportation
-            during the event.
+            Additionally, all finalists will receive a complimentary ticket to
+            the conference and lodging and transportation during the event for
+            one individual from your team.
           </p>
         </section>
         <section>
@@ -173,6 +173,13 @@ const HomePage = () => {
               </ul>
             </li>
           </ol>
+          <p>
+            <em>
+              This is not a pitch for funding. Projects will not be judged based
+              on commercial application, which means whether or not your project
+              is or could generate revenue is not a factor in this competition.
+            </em>
+          </p>
         </section>
         <section>
           <h3>Rules &amp; Requirements</h3>
@@ -190,19 +197,20 @@ const HomePage = () => {
             </li>
             <li>Team sizes must be between 1 and 3 members.</li>
             <li>
-              Submissions must have a demonstration video or working demo
-              included in their README
+              Your final submission will require a demonstration video and/or
+              working demo.
             </li>
             <li>
-              Submissions must be new. Projects started before August 4, 2023
-              are not eligible.
+              Final submissions must be new projects, started after August 3,
+              2023.
             </li>
             <li>
               If you’re under 18, you will need to obtain written permission
               from a parent or legal guardian to enter.
             </li>
             <li>
-              You must be able to provide a link to your project on{' '}
+              For your final submission, you must provide a link to your project
+              on{' '}
               <a href={Constants.GITHUB_URL} target="_blank" rel="noreferrer">
                 GitHub
               </a>
@@ -235,16 +243,16 @@ const HomePage = () => {
         </section>
         <section>
           <h3>Fine Print</h3>
+          <p className="bg-slate-800 p-4">
+            For any questions or to revoke a submission, please contact David at{' '}
+            <a href={`mailto:${Constants.EMAIL}`}>{Constants.EMAIL}</a>
+          </p>
           <ul>
             <li>This is not a pitch for funding.</li>
             <li>
               The RedwoodJS team cannot be held liable for any reason, and
               reserve the right to disqualify any submission for any reason they
               see fit.
-            </li>
-            <li>
-              To revoke submission or ask a question, please contact
-              <a href={`mailto:${Constants.EMAIL}`}>{Constants.EMAIL}</a>
             </li>
             <li>
               RedwoodJS reserves the right to make adjustments to the rules in
