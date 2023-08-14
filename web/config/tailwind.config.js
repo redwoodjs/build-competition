@@ -8,6 +8,9 @@ module.exports = {
         sunshade: '#fb9344' /* yellowish */,
         firefly: '#0a293c' /* dark blue */,
       },
+      screens: {
+        header: '1380px',
+      },
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
