@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import { MetaTags } from '@redwoodjs/web'
+
 import SubmitApplication from 'src/components/SubmitApplication/SubmitApplication'
 import { getCurrentYear } from 'src/utils/DateHelpers'
 
@@ -32,33 +34,35 @@ const HomePage = () => {
 
   return (
     <>
+      <MetaTags
+        description="Join the RedwoodJS Build Competition and unleash your creativity! Open to all developers, we'll be giving away over $10k in prizes and a chance to present at the RedwoodJS Conference. Build innovative projects using Redwood, showcase your skills, and win big. Register by August 16th!"
+        ogUrl="https://build.redwoodjs.com"
+        ogContentUrl="https://build.redwoodjs.com/images/og.png"
+      />
       <div className={`bg-gradient-to-b ${time}`}>
         {/* video of stars for nighttime */}
-        {time === 'hour-5' || time === 'hour-6' ? (
-          <video
-            className="pointer-events-none absolute inset-0 z-10 w-full mix-blend-screen"
-            width="1440"
-            height="810"
-            controls={false}
-            autoPlay={true}
-            muted={true}
-            loop={true}
-          >
-            <source src="/video/stars.mp4" type="video/mp4" />
-          </video>
-        ) : (
-          <video
-            className="pointer-events-none absolute inset-0 z-50 mt-[25vh] w-full mix-blend-multiply md:mt-0"
-            width="1440"
-            height="810"
-            controls={false}
-            autoPlay={true}
-            muted={true}
-            loop={true}
-          >
-            <source src="/video/birds.mp4" type="video/mp4" />
-          </video>
-        )}
+        <video
+          className="star-vid pointer-events-none absolute inset-0 z-10 w-full mix-blend-screen"
+          width="1440"
+          height="810"
+          controls={false}
+          autoPlay={true}
+          muted={true}
+          loop={true}
+        >
+          <source src="/video/stars.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="birds-vid pointer-events-none absolute inset-0 z-50 mt-[25vh] w-full mix-blend-multiply md:mt-0"
+          width="1440"
+          height="810"
+          controls={false}
+          autoPlay={true}
+          muted={true}
+          loop={true}
+        >
+          <source src="/video/birds.mp4" type="video/mp4" />
+        </video>
         <header>
           {/* sky overlay for nighttime */}
           <section className="sky-overlay min-h-[100vh] min-w-[100vw] pt-[70px] text-center">

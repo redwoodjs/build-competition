@@ -93,6 +93,22 @@
 }
 
 @layer components {
+  video {
+    @apply hidden;
+  }
+
+  .hour-1 video.birds-vid,
+  .hour-2 video.birds-vid,
+  .hour-3 video.birds-vid,
+  .hour-4 video.birds-vid,
+  .hour-5 video.star-vid,
+  .hour-6 video.star-vid
+  {
+    @apply block;
+  }
+
+
+
   .hour-1 {
     @apply from-[#fb9344] to-[#de43b5]
   }
@@ -130,7 +146,7 @@
   .hour-2 h1,
   .hour-3 h1,
   .hour-4 h1 {
-    @apply text-white lg:text-firefly;
+    @apply text-white header:text-firefly;
   }
 
   .hour-5 h1,
