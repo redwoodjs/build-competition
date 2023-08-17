@@ -52,6 +52,10 @@
     @apply uppercase font-wide text-2xl mb-6 tracking-tighter text-center text-carminePink;
   }
 
+  h4 {
+    @apply uppercase font-wide text-sunshade text-2xl mb-2
+  }
+
   p {
     @apply mb-6;
   }
@@ -68,11 +72,15 @@
   ol > li:before {
     content: counter(ordered-list);
     counter-increment: ordered-list;
-    @apply absolute -left-6 font-wide text-sunshade text-2xl -top-1;
+    @apply absolute -left-12 font-condensed text-sunshade text-[90px] -top-6;
   }
 
   ol > li > ul {
     @apply mt-5
+  }
+
+  ol > li > ul > li {
+    @apply mb-2;
   }
 
   ul {

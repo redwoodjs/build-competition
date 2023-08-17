@@ -4,6 +4,8 @@ const Constants = {
   REDWOODJS_URL: 'https://redwoodjs.com',
   GITHUB_URL: 'https://github.com',
   EMAIL: 'build@redwoodjs.com',
+  TUTORIAL: 'https://redwoodjs.com/docs/tutorial/foreword',
+  APP_IDEAS: '#',
 }
 
 Object.freeze(Constants)
