@@ -35,7 +35,7 @@ const HomePage = () => {
   return (
     <>
       <MetaTags
-        description="Join the RedwoodJS Build Competition and unleash your creativity! Open to all developers, we'll be giving away over $10k in prizes and a chance to present at the RedwoodJS Conference. Build innovative projects using Redwood, showcase your skills, and win big. Register by August 16th!"
+        description="Join the RedwoodJS Build Competition and unleash your creativity! Open to all developers, we'll be giving away over $10k in prizes and a chance to present at the RedwoodJS Conference. Build innovative projects using Redwood, showcase your skills, and win big.!"
         ogUrl="https://build.redwoodjs.com"
         ogContentUrl="https://build.redwoodjs.com/images/og.png"
       />
@@ -96,8 +96,10 @@ const HomePage = () => {
             Redwood? Now&apos;s your chance!
           </p>
           <p>
-            Join the RedwoodJS Build Competition and challenge yourself to build
-            something new and creative.
+            <a href={Constants.APPLICATION_URL}>
+              Join the RedwoodJS Build Competition
+            </a>{' '}
+            and challenge yourself to build something new and creative.
           </p>
           <p>
             Showcase your skills and present your project at the RedwoodJS
@@ -108,47 +110,90 @@ const HomePage = () => {
           <h3>How it Works</h3>
           <ol>
             <li>
+              <h4>Register</h4>
               <a
                 href={Constants.APPLICATION_URL}
                 target="_blank"
                 rel="noreferrer"
               >
-                Register for the competition by 11:59pm PT, August 16, 2023.
+                Register to participate.
               </a>{' '}
-              This includes a short video (roughly 3 minutes or less),
-              introducing yourself, explaining your ideas, how you will use
-              RedwoodJS, and anything else you might want us to know.
+              You'll receive:
+              <ul>
+                <li>An invitation to a weekly virtual meetup (optional)</li>
+                <li>Access to a private Discord channel</li>
+                <li>Connect with other participants and build a team</li>
+                <li>FREE Sticker</li>
+                <li>
+                  Entry to our raffle and win 2{' '}
+                  <a
+                    href={Constants.CONFERENCE_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    RedwoodJS Conference Tickets
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
+              <h4>Build</h4>
               You&apos;ll have until{' '}
-              <strong>11:59pm PT September 8, 2023</strong> to build your
-              project.
+              <strong className="text-carminePink">
+                11:59pm PT September 8, 2023
+              </strong>{' '}
+              to build your project.
             </li>
             <li>
-              Three finalists will be chosen to present their projects at the{' '}
+              <h4>Submit</h4>
+              <strong className="text-carminePink">
+                Submit your final project
+              </strong>{' '}
+              for review.
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h3>Resources</h3>
+          <ul>
+            <li>
+              <a href={Constants.TUTORIAL} target="_blank" rel="noreferrer">
+                Quick Start tutorial
+              </a>
+            </li>
+            <li>
               <a
-                href={Constants.CONFERENCE_URL}
+                href={Constants.REDWOODJS_URL}
                 target="_blank"
                 rel="noreferrer"
               >
-                RedwoodJS Conference
-              </a>{' '}
-              in Grants Pass, Oregon, September 26- 29th.
+                RedwoodJS Official Documentation
+              </a>
             </li>
-          </ol>
+            <li>
+              <a href={Constants.CONFERENCE_URL}>RedwoodJS Conference</a>
+            </li>
+            <li>
+              <a href={Constants.APP_IDEAS} target="_blank" rel="noreferrer">
+                Here are some app ideas
+              </a>{' '}
+              to inspire you.
+            </li>
+          </ul>
         </section>
         <section>
           <h3>Prizes</h3>
           <p>We will be awarding over $10k in prizes. Here’s the breakdown:</p>
           <ul>
-            <li>1st Place - $7k</li>
+            <li>1st Place - $5k</li>
             <li>2nd Place - $2k</li>
             <li>3rd Place - $1k</li>
+            <li>4 Runners Up - $500 each</li>
           </ul>
           <p>
-            Additionally, all finalists will receive a complimentary ticket to
-            the conference and lodging and transportation during the event for
-            one individual from your team.
+            Additionally, 1st, 2nd, and 3rd place winners will receive 1
+            complimentary ticket to the conference, lodging during the event,
+            and airfare for one individual from your team.
           </p>
         </section>
         <section>
@@ -229,13 +274,14 @@ const HomePage = () => {
               >
                 Register
               </a>{' '}
-              by <strong>11:59pm PT August 16, 2023</strong>. This includes a
-              short video introducing yourself and your ideas.
+              for the competition.
             </li>
             <li>
               You&apos;ll have until{' '}
-              <strong>11:59pm PT September 8, 2023</strong> to build your
-              project.{' '}
+              <strong className="text-carminePink">
+                11:59pm PT September 8, 2023
+              </strong>{' '}
+              to build your project.{' '}
             </li>
             <li>
               The Redwood team will select three finalists by September 15, 2023
