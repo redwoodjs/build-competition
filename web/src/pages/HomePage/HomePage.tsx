@@ -190,12 +190,12 @@ const HomePage = () => {
             <li>
               <a href={Constants.CONFERENCE_URL}>RedwoodJS Conference</a>
             </li>
-            {/* <li>
+            <li>
               <a href={Constants.APP_IDEAS} target="_blank" rel="noreferrer">
                 Here are some app ideas
               </a>{' '}
               to inspire you
-            </li> */}
+            </li>
           </ul>
         </section>
         <section>
