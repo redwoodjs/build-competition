@@ -68,8 +68,8 @@ const HomePage = () => {
           <section className="sky-overlay min-h-[100vh] min-w-[100vw] pt-[70px] text-center">
             <div className="relative mx-auto w-full px-5 text-center sm:w-[550px]">
               <img
-                src="/images/logo.svg"
-                alt="RedwoodJS"
+                src="/images/conference-logo.svg"
+                alt="RedwoodJS Conference"
                 className="mx-auto mb-[50px]"
               />
               <h1 className="mb-10 font-condensed text-[100px] leading-none md:text-[150px] md:leading-[144px]">
@@ -78,11 +78,11 @@ const HomePage = () => {
                 Competition
               </h1>
               <h2 className="mb-[70px] font-wide text-base leading-tight tracking-[-7%] text-[#faf0e1] sm:text-[25px]">
-                Get Creative &amp;
+                4 weeks to build
                 <br />
-                Build Something Cool
+                3 finalists
                 <br />
-                &amp; win cash money
+                $10,000 in prizes
               </h2>
               <SubmitApplication />
             </div>
