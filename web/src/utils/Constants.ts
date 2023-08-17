@@ -5,7 +5,8 @@ const Constants = {
   GITHUB_URL: 'https://github.com',
   EMAIL: 'build@redwoodjs.com',
   TUTORIAL: 'https://redwoodjs.com/docs/tutorial/foreword',
-  APP_IDEAS: '#',
+  APP_IDEAS:
+    'https://github.com/redwoodjs/build-competition/blob/main/other/APP_IDEAS.md',
 }
 
 Object.freeze(Constants)

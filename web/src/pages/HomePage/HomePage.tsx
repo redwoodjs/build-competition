@@ -91,22 +91,6 @@ const HomePage = () => {
       </div>
       <main className="px-5 md:px-0">
         <section>
-          <p>
-            Do you have an idea that you&apos;ve been wanting to build with
-            Redwood? Now&apos;s your chance!
-          </p>
-          <p>
-            <a href={Constants.APPLICATION_URL}>
-              Join the RedwoodJS Build Competition
-            </a>{' '}
-            and challenge yourself to build something new and creative.
-          </p>
-          <p>
-            Showcase your skills and present your project at the RedwoodJS
-            Conference for a chance to win!
-          </p>
-        </section>
-        <section>
           <h3>How it Works</h3>
           <ol>
             <li>
@@ -116,16 +100,18 @@ const HomePage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Register to participate.
+                Register to participate
               </a>{' '}
-              You'll receive:
+              anytime up till two days before the September 10th submission
+              deadline. You&apos;ll receive:
               <ul>
+                <li>Virtual support from Redwood Core Team members</li>
                 <li>An invitation to a weekly virtual meetup (optional)</li>
                 <li>Access to a private Discord channel</li>
                 <li>Connect with other participants and build a team</li>
-                <li>FREE Sticker</li>
+                <li>FREE Redwood Stickers 🤩</li>
                 <li>
-                  Entry to our raffle and win 2{' '}
+                  Raffle entry giving away two{' '}
                   <a
                     href={Constants.CONFERENCE_URL}
                     target="_blank"
@@ -133,6 +119,15 @@ const HomePage = () => {
                   >
                     RedwoodJS Conference Tickets
                   </a>
+                  . (Winners announced Tuesday, August 29th) Register now using
+                  <a
+                    href={Constants.APPLICATION_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    this form
+                  </a>
+                  .
                 </li>
               </ul>
             </li>
@@ -140,7 +135,7 @@ const HomePage = () => {
               <h4>Build</h4>
               You&apos;ll have until{' '}
               <strong className="text-carminePink">
-                11:59pm PT September 8, 2023
+                11:59pm PT September 10, 2023
               </strong>{' '}
               to build your project.
             </li>
@@ -150,6 +145,28 @@ const HomePage = () => {
                 Submit your final project
               </strong>{' '}
               for review.
+              <br />
+              Final Submission details and instructions will be provided to
+              registrations before the deadline.
+            </li>
+            <li>
+              <h4>Present</h4>
+              <strong className="text-carminePink">
+                Submit your final project
+              </strong>{' '}
+              for review.
+              <br />
+              Final Submission details and instructions will be provided to
+              registrations before the deadline.
+            </li>
+            <li>
+              <h4>Present</h4>
+              <strong className="text-carminePink">
+                Finalists present during the conference.
+              </strong>
+              <br />
+              Three finalists, and four runners-up, will be selected. Finalists
+              will present to a panel of judges during the conference.
             </li>
           </ol>
         </section>
@@ -173,12 +190,12 @@ const HomePage = () => {
             <li>
               <a href={Constants.CONFERENCE_URL}>RedwoodJS Conference</a>
             </li>
-            {/* <li>
+            <li>
               <a href={Constants.APP_IDEAS} target="_blank" rel="noreferrer">
                 Here are some app ideas
               </a>{' '}
               to inspire you
-            </li> */}
+            </li>
           </ul>
         </section>
         <section>
@@ -251,8 +268,8 @@ const HomePage = () => {
             </li>
             <li>Team sizes must be between 1 and 3 members.</li>
             <li>
-              Your final submission will require a demonstration video and/or
-              working demo.
+              Your <em>final</em> submission will require a demonstration video
+              and/or working demo.
             </li>
             <li>
               Final submissions must be new projects, started after August 3,
@@ -280,7 +297,7 @@ const HomePage = () => {
                 Register
               </a>{' '}
               for the competition anytime up to two days before the final
-              submission deadline on September 10th.
+              submission deadline on September 10, 2023.
             </li>
             <li>
               You&apos;ll have until{' '}
