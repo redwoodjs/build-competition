@@ -104,7 +104,7 @@ const HomePage = () => {
               </a>{' '}
               anytime up till two days before the September 10th submission
               deadline. You&apos;ll receive:
-              <ul>
+              <ul className="mb-4">
                 <li>Virtual support from Redwood Core Team members</li>
                 <li>An invitation to a weekly virtual meetup (optional)</li>
                 <li>Access to a private Discord channel</li>
@@ -119,17 +119,18 @@ const HomePage = () => {
                   >
                     RedwoodJS Conference Tickets
                   </a>
-                  . (Winners announced Tuesday, August 29th) Register now using
-                  <a
-                    href={Constants.APPLICATION_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    this form
-                  </a>
-                  .
+                  . (Winners announced Tuesday, August 29th)
                 </li>
               </ul>
+              Register now using{' '}
+              <a
+                href={Constants.APPLICATION_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                this form
+              </a>
+              .
             </li>
             <li>
               <h4>Build</h4>
@@ -141,16 +142,6 @@ const HomePage = () => {
             </li>
             <li>
               <h4>Submit</h4>
-              <strong className="text-carminePink">
-                Submit your final project
-              </strong>{' '}
-              for review.
-              <br />
-              Final Submission details and instructions will be provided to
-              registrations before the deadline.
-            </li>
-            <li>
-              <h4>Present</h4>
               <strong className="text-carminePink">
                 Submit your final project
               </strong>{' '}
