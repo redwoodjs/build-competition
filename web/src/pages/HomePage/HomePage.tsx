@@ -173,17 +173,17 @@ const HomePage = () => {
             <li>
               <a href={Constants.CONFERENCE_URL}>RedwoodJS Conference</a>
             </li>
-            <li>
+            {/* <li>
               <a href={Constants.APP_IDEAS} target="_blank" rel="noreferrer">
                 Here are some app ideas
               </a>{' '}
-              to inspire you.
-            </li>
+              to inspire you
+            </li> */}
           </ul>
         </section>
         <section>
           <h3>Prizes</h3>
-          <p>We will be awarding over $10k in prizes. Here’s the breakdown:</p>
+          <p>We will be awarding $10k (USD) in prizes. Here’s the breakdown:</p>
           <ul>
             <li>1st Place - $5k</li>
             <li>2nd Place - $2k</li>
@@ -194,6 +194,11 @@ const HomePage = () => {
             Additionally, 1st, 2nd, and 3rd place winners will receive 1
             complimentary ticket to the conference, lodging during the event,
             and airfare for one individual from your team.
+          </p>
+          <p>
+            Finalists are encouraged to attend the conference but not required
+            to do so. All finalists are required to present during the
+            conference, either in person or virtually.
           </p>
         </section>
         <section>
@@ -274,12 +279,13 @@ const HomePage = () => {
               >
                 Register
               </a>{' '}
-              for the competition.
+              for the competition anytime up to two days before the final
+              submission deadline on September 10th.
             </li>
             <li>
               You&apos;ll have until{' '}
               <strong className="text-carminePink">
-                11:59pm PT September 8, 2023
+                11:59pm PT September 10, 2023
               </strong>{' '}
               to build your project.{' '}
             </li>
