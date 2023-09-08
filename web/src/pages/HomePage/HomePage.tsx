@@ -35,9 +35,11 @@ const HomePage = () => {
   return (
     <>
       <MetaTags
+        title="RedwoodJS Build Competition"
         description="Join the RedwoodJS Build Competition and unleash your creativity! Open to all developers, we'll be giving away over $10k in prizes and a chance to present at the RedwoodJS Conference. Build innovative projects using Redwood, showcase your skills, and win big.!"
         ogUrl="https://build.redwoodjs.com"
         ogContentUrl="https://build.redwoodjs.com/images/og.png"
+        robots={['nofollow']}
       />
       <div className={`bg-gradient-to-b ${time}`}>
         {/* video of stars for nighttime */}
